@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Kerja Internet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Cara Kerja Internet</h1>
+            <nav>
+                <ul>
+                    <li><a href="#pendahuluan">Pendahuluan</a></li>
+                    <li><a href="#umum">Cara Kerja Umum</a></li>
+                    <li><a href="#http">HTTP/HTTPS</a></li>
+                    <li><a href="#domain">Nama Domain</a></li>
+                    <li><a href="#hosting">Hosting</a></li>
+                    <li><a href="#dns">DNS</a></li>
+                    <li><a href="#browser">Browser</a></li>
+                    <li><a href="#kesimpulan">Kesimpulan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="pendahuluan">
+            <h2>Pendahuluan</h2>
+            <p>Internet telah menjadi bagian integral dari kehidupan modern kita. Setiap hari, miliaran orang di seluruh dunia menggunakan internet untuk berkomunikasi, bekerja, belajar, berbelanja, dan menghibur diri. Namun, seberapa banyak kita benar-benar memahami bagaimana internet bekerja?</p>
+            
+            <p>Internet adalah jaringan global yang menghubungkan jutaan komputer dan perangkat elektronik di seluruh dunia. Jaringan ini memungkinkan pertukaran informasi, komunikasi, dan akses ke berbagai layanan digital. Memahami cara kerja internet tidak hanya menarik dari segi teknis, tetapi juga penting untuk menggunakan internet secara efektif dan aman.</p>
+            
+            <p>Dalam panduan ini, kita akan menjelajahi berbagai aspek fundamental dari cara kerja internet, mulai dari konsep dasar client-server hingga teknologi kompleks seperti DNS dan rendering browser. Mari kita mulai perjalanan untuk memahami teknologi yang mengubah dunia ini.</p>
+        </section>
+
+        <section id="umum">
+            <h2>Cara Kerja Internet Secara Umum</h2>
+            <p>Internet pada dasarnya adalah jaringan dari jaringan-jaringan komputer yang saling terhubung di seluruh dunia. Konsep fundamental yang mendasari internet adalah model client-server, di mana perangkat pengguna (client) berkomunikasi dengan komputer yang menyediakan layanan (server).</p>
+            
+            <p>Ketika Anda mengakses sebuah website, komputer atau perangkat Anda bertindak sebagai client yang mengirimkan permintaan ke server yang menyimpan konten website tersebut. Server kemudian merespons dengan mengirimkan data yang diminta kembali ke client Anda.</p>
+            
+            <img src="img/Model Client Server.jpg" alt="Model Client Server">
+            
+            <p>Proses komunikasi ini melibatkan beberapa komponen dan tahapan penting:</p>
+            
+            <h3>Komponen Utama Internet</h3>
+            <ul>
+                <li><strong>ISP (Internet Service Provider):</strong> Penyedia layanan internet yang menghubungkan perangkat Anda ke internet global</li>
+                <li><strong>Router dan Switch:</strong> Perangkat yang mengarahkan data melalui jaringan</li>
+                <li><strong>Kabel dan Infrastruktur:</strong> Kabel fiber optik, tembaga, dan infrastruktur wireless yang membawa data</li>
+                <li><strong>Protokol Komunikasi:</strong> Aturan standar seperti TCP/IP yang memungkinkan perangkat berkomunikasi</li>
+                <li><strong>Server:</strong> Komputer yang menyimpan dan menyajikan konten website dan aplikasi</li>
+                <li><strong>Data Center:</strong> Fasilitas yang menampung server-server besar</li>
+            </ul>
+            
+            <h3>Tahapan Akses Website</h3>
+            <ol>
+                <li>Pengguna mengetikkan URL atau mengklik link di browser</li>
+                <li>Browser mengirim permintaan DNS untuk menerjemahkan nama domain menjadi alamat IP</li>
+                <li>Setelah mendapat alamat IP, browser mengirim permintaan HTTP/HTTPS ke server</li>
+                <li>Permintaan diteruskan melalui berbagai router dan jaringan ISP</li>
+                <li>Server menerima permintaan dan memproses data yang diminta</li>
+                <li>Server mengirim respons berupa file HTML, CSS, JavaScript, dan media</li>
+                <li>Data perjalanan kembali melalui jaringan ke perangkat pengguna</li>
+                <li>Browser menerima data dan merender halaman website untuk ditampilkan</li>
+            </ol>
+            
+            <p class="source">Sumber: Konsep dasar jaringan komputer dan arsitektur internet (Tanenbaum & Wetherall, 2011)</p>
+        </section>
+
+        <section id="http">
+            <h2>Definisi dan Cara Kerja HTTP dan HTTPS</h2>
+            <p><strong>HTTP (HyperText Transfer Protocol)</strong> adalah protokol komunikasi yang digunakan untuk mentransfer data antara client (browser) dan server di internet. HTTP mendefinisikan bagaimana pesan diformat dan dikirim, serta tindakan apa yang harus diambil server dan browser sebagai respons terhadap berbagai perintah.</p>
+            
+            <p>HTTP bekerja berdasarkan model request-response. Client mengirim permintaan HTTP ke server, yang kemudian memproses permintaan tersebut dan mengirim respons HTTP kembali ke client. Setiap transaksi HTTP terdiri dari permintaan dari client dan respons dari server.</p>
+            
+            <p><strong>HTTPS (HyperText Transfer Protocol Secure)</strong> adalah versi aman dari HTTP. HTTPS menggunakan enkripsi SSL/TLS untuk mengamankan komunikasi antara client dan server. Semua data yang dikirim antara browser dan website dienkripsi, sehingga melindungi informasi sensitif dari intersepsi oleh pihak ketiga.</p>
+            
+            <img src="img/HTTP & HTTPS.png" alt="Diagram HTTP vs HTTPS" />
+            
+            <h3>Perbedaan Utama HTTP dan HTTPS</h3>
+            <ul>
+                <li><strong>Keamanan:</strong> HTTP tidak aman, HTTPS menggunakan enkripsi SSL/TLS</li>
+                <li><strong>Port:</strong> HTTP menggunakan port 80, HTTPS menggunakan port 443</li>
+                <li><strong>URL:</strong> HTTP dimulai dengan "http://", HTTPS dengan "https://"</li>
+                <li><strong>Sertifikat:</strong> HTTPS memerlukan sertifikat SSL dari Certificate Authority</li>
+                <li><strong>Performa:</strong> HTTPS sedikit lebih lambat karena proses enkripsi/dekripsi</li>
+                <li><strong>SEO:</strong> Google memberikan ranking lebih tinggi untuk website HTTPS</li>
+            </ul>
+            
+            <p class="source">Sumber: RFC 2616 (HTTP/1.1) dan RFC 2818 (HTTPS), Mozilla Developer Network</p>
+        </section>
+
+        <section id="domain">
+            <h2>Definisi dan Cara Kerja Nama Domain</h2>
+            <p><strong>Nama domain</strong> adalah alamat unik yang digunakan untuk mengidentifikasi website di internet. Domain name berfungsi sebagai pengganti alamat IP yang berupa angka-angka rumit, sehingga lebih mudah diingat oleh manusia. Misalnya, "google.com" lebih mudah diingat daripada "172.217.14.206".</p>
+            
+            <p>Sistem nama domain mengikuti struktur hierarkis yang terdiri dari beberapa level. Hierarki ini dimulai dari top-level domain (TLD) di level tertinggi, diikuti oleh second-level domain, dan seterusnya hingga subdomain di level terendah.</p>
+            
+            <img src="img/Hirarki Name space.png" alt="Hierarki Nama Domain" />
+            
+            <h3>Struktur Hierarki Domain</h3>
+            <ul>
+                <li><strong>Top-Level Domain (TLD):</strong> .com, .org, .net, .id, .edu (level tertinggi)</li>
+                <li><strong>Second-Level Domain:</strong> Nama utama yang didaftarkan (contoh: "google" dalam google.com)</li>
+                <li><strong>Subdomain:</strong> Bagian tambahan sebelum domain utama (contoh: "www" atau "mail")</li>
+                <li><strong>Fully Qualified Domain Name (FQDN):</strong> Nama domain lengkap termasuk semua level</li>
+            </ul>
+            
+            <p>Proses registrasi domain melibatkan pendaftaran nama domain pada registrar yang terakreditasi. Setiap domain memiliki informasi WHOIS yang mencatat detail kepemilikan, tanggal registrasi, dan tanggal kedaluwarsa.</p>
+            
+            <p class="source">Sumber: RFC 1034 dan RFC 1035 (Domain Name System), ICANN (Internet Corporation for Assigned Names and Numbers)</p>
+        </section>
+
+        <section id="hosting">
+            <h2>Definisi dan Cara Kerja Hosting</h2>
+            <p><strong>Web hosting</strong> adalah layanan yang menyediakan ruang server untuk menyimpan file-file website agar dapat diakses melalui internet. Ketika seseorang mengunjungi website Anda, browser mereka akan terhubung ke server hosting dan mengunduh file-file website tersebut.</p>
+            
+            <img src="img/Alur Virtual Hosting.png" alt="Alur Web Hosting" />
+            
+            <p>Server hosting adalah komputer khusus yang dirancang untuk berjalan 24/7 dan melayani permintaan dari pengunjung website. Server ini ditempatkan di data center dengan koneksi internet berkecepatan tinggi, sistem pendingin, dan backup power untuk memastikan website selalu online.</p>
+            
+            <h3>Jenis-Jenis Web Hosting</h3>
+            <ul>
+                <li><strong>Shared Hosting:</strong> Berbagi server dengan website lain, ekonomis untuk pemula</li>
+                <li><strong>VPS (Virtual Private Server):</strong> Server virtual dengan resource dedicated</li>
+                <li><strong>Dedicated Server:</strong> Server fisik khusus untuk satu website/aplikasi</li>
+                <li><strong>Cloud Hosting:</strong> Menggunakan multiple server untuk reliability dan scalability</li>
+                <li><strong>Managed Hosting:</strong> Hosting dengan layanan pengelolaan teknis lengkap</li>
+                <li><strong>WordPress Hosting:</strong> Hosting yang dioptimasi khusus untuk WordPress</li>
+            </ul>
+            
+            <h3>Komponen Hosting</h3>
+            <ul>
+                <li><strong>Storage Space:</strong> Ruang penyimpanan untuk file website</li>
+                <li><strong>Bandwidth:</strong> Kapasitas transfer data bulanan</li>
+                <li><strong>Control Panel:</strong> Interface untuk mengelola hosting (cPanel, Plesk)</li>
+                <li><strong>Email Hosting:</strong> Layanan email dengan domain sendiri</li>
+                <li><strong>Database:</strong> Penyimpanan data dinamis (MySQL, PostgreSQL)</li>
+                <li><strong>SSL Certificate:</strong> Sertifikat keamanan untuk HTTPS</li>
+                <li><strong>Backup:</strong> Sistem backup otomatis data website</li>
+            </ul>
+            
+            <p class="source">Sumber: Web Hosting Industry Review, cPanel Documentation, Cloud Security Alliance</p>
+        </section>
+
+        <section id="dns">
+            <h2>Definisi dan Cara Kerja DNS (Domain Name System)</h2>
+            <p><strong>DNS (Domain Name System)</strong> adalah sistem yang menerjemahkan nama domain yang mudah diingat manusia (seperti www.google.com) menjadi alamat IP numerik (seperti 172.217.14.206) yang dipahami oleh komputer. DNS sering disebut sebagai "buku telepon internet" karena fungsinya yang mirip dengan buku telepon tradisional.</p>
+            
+            <img src="img/" alt="Konsep DNS" />
+            
+            <h3>Komponen DNS</h3>
+            <ul>
+                <li><strong>DNS Resolver:</strong> Server yang menerima permintaan DNS dari client dan mencari jawaban</li>
+                <li><strong>Root Nameserver:</strong> Server tingkat teratas yang mengetahui lokasi TLD nameserver</li>
+                <li><strong>TLD Nameserver:</strong> Server yang menangani top-level domain (.com, .org, .net)</li>
+                <li><strong>Authoritative Nameserver:</strong> Server yang memiliki informasi definitif tentang domain tertentu</li>
+                <li><strong>DNS Cache:</strong> Penyimpanan sementara hasil DNS query untuk mempercepat akses</li>
+                <li><strong>DNS Records:</strong> Berbagai jenis record (A, AAAA, CNAME, MX, TXT, NS)</li>
+            </ul>
+            
+            <h3>Tahapan Cara Kerja DNS</h3>
+            <ol>
+                <li><strong>User Request:</strong> Pengguna mengetikkan domain di browser</li>
+                <li><strong>Local Cache Check:</strong> Browser mengecek cache DNS lokal</li>
+                <li><strong>Recursive Query:</strong> Jika tidak ada di cache, permintaan dikirim ke DNS resolver</li>
+                <li><strong>Root Server Query:</strong> Resolver menanyakan root nameserver tentang TLD</li>
+                <li><strong>TLD Server Query:</strong> Root server memberikan alamat TLD nameserver</li>
+                <li><strong>Authoritative Query:</strong> TLD server memberikan alamat authoritative nameserver</li>
+                <li><strong>Final Resolution:</strong> Authoritative server memberikan alamat IP final</li>
+                <li><strong>Response Return:</strong> Alamat IP dikembalikan ke browser untuk koneksi</li>
+            </ol>
+            
+            <img src="img/Tahapan Kerja DNS.jpg" alt="Alur Kerja DNS" />
+            
+            <p class="source">Sumber: RFC 1034, RFC 1035 (DNS Implementation), BIND 9 Administrator Reference Manual</p>
+        </section>
+
+        <section id="browser">
+            <h2>Definisi dan Cara Kerja Browser</h2>
+            <p><strong>Web browser</strong> adalah aplikasi software yang digunakan untuk mengakses dan menampilkan konten di World Wide Web. Browser berfungsi sebagai interface antara pengguna dan internet, memungkinkan navigasi melalui website, menampilkan teks, gambar, video, dan konten multimedia lainnya.</p>
+            <img src="img/alur kerja browser.png" alt="Alur Kerja Browser">
+            
+            <p>Browser modern tidak hanya menampilkan halaman web statis, tetapi juga dapat menjalankan aplikasi web kompleks, mengelola cookies, menyimpan data lokal, dan menyediakan berbagai fitur keamanan untuk melindungi pengguna dari ancaman online.</p>
+            
+            <h3>Komponen Utama Browser</h3>
+            <ul>
+                <li><strong>User Interface:</strong> Address bar, tombol back/forward, bookmark, tabs</li>
+                <li><strong>Browser Engine:</strong> Interface antara UI dan rendering engine</li>
+                <li><strong>Rendering Engine:</strong> Bertanggung jawab untuk menampilkan konten yang diminta</li>
+                <li><strong>Networking:</strong> Menangani panggilan jaringan seperti HTTP requests</li>
+                <li><strong>JavaScript Interpreter:</strong> Engine untuk mengeksekusi kode JavaScript</li>
+                <li><strong>UI Backend:</strong> Menggambar widget dasar seperti combo box dan windows</li>
+                <li><strong>Data Storage:</strong> Menyimpan data seperti cookies, localStorage, sessionStorage</li>
+            </ul>
+            
+            <h3>Cara Kerja Browser (Rendering Process)</h3>
+            <img src="img/proses rendering.png" alt="Proses Rendering Browser">
+            <ol>
+                <li><strong>DNS Lookup:</strong> Browser menerjemahkan URL menjadi alamat IP</li>
+                <li><strong>HTTP Request:</strong> Mengirim permintaan ke server untuk file HTML</li>
+                <li><strong>Parse HTML:</strong> Membangun DOM (Document Object Model) tree</li>
+                <li><strong>Parse CSS:</strong> Membangun CSSOM (CSS Object Model) tree</li>
+                <li><strong>Render Tree:</strong> Menggabungkan DOM dan CSSOM menjadi render tree</li>
+                <li><strong>Layout/Reflow:</strong> Menghitung posisi dan ukuran setiap elemen</li>
+                <li><strong>Paint:</strong> Menggambar elemen-elemen ke layer</li>
+                <li><strong>Composite:</strong> Menggabungkan layer menjadi halaman final</li>
+                <li><strong>JavaScript Execution:</strong> Menjalankan script yang dapat memodifikasi DOM</li>
+                <li><strong>Resource Loading:</strong> Memuat gambar, font, dan resource eksternal lainnya</li>
+            </ol>
+            
+            <h3>Contoh Rendering Engine</h3>
+            <ul>
+                <li><strong>Blink:</strong> Digunakan oleh Chrome, Edge, Opera (berbasis Chromium)</li>
+                <li><strong>Gecko:</strong> Digunakan oleh Firefox</li>
+                <li><strong>WebKit:</strong> Digunakan oleh Safari</li>
+                <li><strong>Trident:</strong> Digunakan oleh Internet Explorer (legacy)</li>
+            </ul>
+            
+            <p class="source">Sumber: Mozilla Developer Network, Google Chrome DevTools Documentation, W3C Web Standards</p>
+        </section>
+
+        <section id="kesimpulan">
+            <h2>Kesimpulan</h2>
+            <p>Internet merupakan sistem kompleks yang melibatkan berbagai teknologi dan protokol yang bekerja sama untuk memungkinkan komunikasi global. Dari pemahaman kita tentang cara kerja internet, dapat disimpulkan bahwa setiap akses ke website melibatkan proses yang rumit namun berlangsung dalam hitungan detik.</p>
+            
+            <p>Komponen-komponen utama seperti DNS, HTTP/HTTPS, hosting, dan browser semuanya memiliki peran penting dalam ekosistem internet. DNS menerjemahkan nama domain menjadi alamat IP, HTTP/HTTPS mengatur komunikasi antara client dan server, hosting menyediakan infrastruktur server, dan browser merender konten untuk pengguna.</p>
+            
+            <p>Memahami cara kerja internet tidak hanya memberikan apresiasi terhadap kompleksitas teknologi modern, tetapi juga membantu dalam pengambilan keputusan yang lebih baik dalam penggunaan internet sehari-hari. Pengetahuan ini juga penting untuk pengembangan website, keamanan online, dan optimasi performa web.</p>
+            
+            <p>Dengan terus berkembangnya teknologi internet, seperti HTTP/3, IPv6, dan edge computing, pemahaman fundamental tentang cara kerja internet akan terus menjadi dasar yang penting untuk mengikuti perkembangan teknologi di masa depan.</p>
+            
+            <p>Internet telah mengubah cara kita berkomunikasi, bekerja, dan hidup. Dengan memahami cara kerjanya, kita dapat memanfaatkan teknologi ini secara lebih efektif dan bertanggung jawab dalam era digital ini.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Edukasi Cara Kerja Internet. Dibuat untuk Tugas Kelas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
